@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Github Badge Example</title>
+        <link type='text/css' rel='stylesheet' href='github-badge.css'/>
+        <style type='text/css'>
+            body {
+                font-family: "Ubuntu","Open Sans","Century Gothic","Arial Black","Liberations Sans",Arial,sans-serif;
+            }
+        </style>
+        <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+        <script type='text/javascript' src='github-badge.js'></script>
+    </head>
+<body>
+    <div id='github-badge-wrapper'>
+    </div>
+
+    <script type='text/javascript'>
+        $(document).ready(function () {
+            var ghdiv = $('#github-badge-wrapper');
+            $(ghdiv).html('<span class="github-badge-status">Loading github info...</span>');
+
+            /* Get username from url params. */
+            var paramname = github_badge.url_info().parameters.username;
+            var username = paramname || 'welbornprod';
+            /* Gather basic user info from github. */
+            github_badge.build(username,
+                function success (jqnode) {
+                    $('#github-badge-wrapper').html(jqnode);
+                },
+                function error (msg) {
+                    console.log('Error gathering user info: ' + msg);
+                    $(ghdiv).css({'display': 'none'});
+                });
+        });
+    </script>
+</body>
+</html>
