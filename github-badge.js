@@ -36,7 +36,7 @@
                 );
             });
         </script>
-*/
+        */
 'use strict';
 var github_badge = {
     version: '0.0.2',
