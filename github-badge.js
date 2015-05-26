@@ -12,6 +12,7 @@
     Example use:
         <!-- Include all necessary files. -->
         <link type='text/css' rel='stylesheet' href='github-badge.css'>
+        <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
         <script type='text/javascript' src='github-badge.js'></script>
 
         <!-- Create a div to put the badge in. -->
