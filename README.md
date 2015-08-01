@@ -1,9 +1,10 @@
 Github Badge
 ============
 
-A small github badge made with jQuery. 
-It was inpired by the [github social coding](http://githubbadge.appspot.com/) 
-badge (but has fewer bells and whistles).
+A small github badge made with jQuery.
+It was inpired by the [github social coding](http://githubbadge.appspot.com/)
+badge (but has fewer bells and whistles). This may cause client side users to
+exceed their github api usage limit.
 
 
 Example:
